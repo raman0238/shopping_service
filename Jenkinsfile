@@ -2,11 +2,22 @@ pipeline {
     agent any
     
     stages {
-        stage('Gradle') {
+        stage('compile') {
             steps {
                 echo 'pipe line success'
-                 sh 'gradle project/build.gradle classes'
             }
         }
+        
+         stage('test') {
+            steps {
+                echo 'pipe line success'
+            }
+        }
+         stage('sonar') {
+            steps {
+                echo 'pipe line success'
+            }
+        }
+         
     }
 }
