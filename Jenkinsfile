@@ -5,7 +5,7 @@ pipeline{
    stage("build")
    {
    steps {
-            gradle('build')
+            gradlew('build')
           }
      }
   }
