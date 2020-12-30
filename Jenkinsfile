@@ -1,12 +1,13 @@
-pipeline{
-  agent any
-  
-  stages{
-   stage("build")
-   {
-   steps {
-            gradlew('build')
-          }
-     }
-  }
+pipeline {
+    agent any
+    tools {
+        gradle "GRADLE_LATEST"
+    }
+    stages {
+        stage('Gradle') {
+            steps {
+                sh 'gradle --version'
+            }
+        }
+    }
 }
