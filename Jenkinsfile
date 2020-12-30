@@ -1,6 +1,5 @@
-pipeline {
-    agent any
-    
+node {
+ 
     stages {
         stage('compile') {
             steps {
